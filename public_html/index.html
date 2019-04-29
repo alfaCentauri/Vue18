@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+    Created on : 31/01/2019, 06:27:00 PM
+    Author     : Ricardo Presilla.
+    Licencia GNU.
+-->
+<html>
+    <head>
+        <title>Vue.js</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> 
+        <link href="css/estilos.css" rel="stylesheet" /> 
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/bootstrap-datepicker.es.js" charset="UTF-8"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>Componentes con prop y fusión de atributos existentes:</p>
+            <input id="dia" v-model="fecha"/>
+            <br>
+            <br>
+            <label>Fecha: </label>
+            <bootstrap-date-input
+                data-date-picker="activated"
+                class="form-control date-picker-theme-dark"
+                v-model="fecha"
+            ></bootstrap-date-input>
+            <p>La fecha leida es: {{ fecha }}</p>
+        </div>
+        <script src="js/main.js" type="text/javascript"></script>
+    </body>
+</html>
